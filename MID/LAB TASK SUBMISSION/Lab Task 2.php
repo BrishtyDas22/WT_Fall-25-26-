@@ -55,13 +55,13 @@
     <input type="text" id="name" />
  
     <label>Email:</label>
-    <input type="text" id="studentId" />
+    <input type="text" id="email" />
  
     <label>Password:</label>
-    <input type="number" id="age" />
+    <input type="number" id="password" />
  
     <label>confirm Password:</label>
-    <input type="number" id="age" />
+    <input type="number" id="confirm_password" />
   
  
     <button type="submit">Register</button>
@@ -73,13 +73,32 @@
   <form onsubmit="return handleSubmit()">
         <h2>Course Registration</h2>
     <label>Course Name:</label>
-    <input type="text" id="name1" />
+    <input type="text" id="course_name" />
  
      <button type="submit">Add Course</button>
  
     <input type="text" id="web tech" />
   </form>
  
-  
+    <!-- Output Section -->
+  <div id="error"></div>
+  <div id="output"></div>
+  <script>
+    function handleSubmit() {
+      // Get values from form
+      var name = document.getElementById("name").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var password = document.getElementById("password").value.trim();
+      var confirm_password = document.getElementById("confirm_password").value.trim();
+       var course_name = document.getElementById("course_name").value.trim();
+
+      var errorDiv = document.getElementById("error");
+      var outputDiv = document.getElementById("output");
+ 
+      // Clear previous messages
+      errorDiv.innerHTML = "";
+      outputDiv.innerHTML = "";
+    }
+ </script>
 </body>
 </html>
