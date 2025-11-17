@@ -9,14 +9,14 @@
       background-color: #d2dee9ff;
     }
  
-    h2 {
+    h1 {
       text-align: center;
       color: #000000ff;
     }
  
     form {
       background-color: #ffffff;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px;
       width: 300px;
       margin: 0 auto;
@@ -31,7 +31,7 @@
     }
  
     button {
-      background-color: #2e64c8ff;
+      background-color: #285fc4ff;
       width:120px;
       padding:8px;
       border-radius:5px;
@@ -65,7 +65,7 @@
   
  
     <button type="submit">Register</button>
-    <div id="reg_output" style="margin-top:15px; color:black"></div>
+    <div id="reg_output" style="margin-top:15px; color:black;padding:10px; border:2px solid green; border-radius:5px; background-color:green;"></div>
      <div id="reg_error" style="color:red;"></div>
   </form>
  
@@ -79,10 +79,10 @@
     <input type="text" id="course_name" />
  
      <button type="submit">Add Course</button>
-     <div id="course_output" style="margin-top:15px; color:black"></div>
+     <div id="course_output" style="margin-top:15px; color:black;padding:10px; border:2px solid black; border-radius:5px; background-color:white;"></div>
      <div id="course_error" style="color:red;"></div>
  
-    <input type="text" id="web_tech" />
+ 
   </form>
  
   <script>
@@ -95,9 +95,7 @@
 
 var errorDiv = document.getElementById("reg_error");
       var outputDiv = document.getElementById("reg_output");
-   // Clear previous messages
-      errorDiv.innerHTML = "";
-      outputDiv.innerHTML = "";
+ 
 
       
       // Validation
@@ -126,19 +124,17 @@ var errorDiv = document.getElementById("reg_error");
         var course_name=document.getElementById("course_name").value.trim();
         var errorDiv = document.getElementById("course_error");
       var outputDiv = document.getElementById("course_output");
-      // Clear previous messages
-      errorDiv.innerHTML = "";
-      outputDiv.innerHTML = "";
+    
       if(course_name=== "")
       {
         errorDiv.innerHTML="please enter acourse name";
         return false;
       }
       outputDiv.innerHTML = `
-        <strong>Registration Successful!</strong><br><br>
+        
       
         
-        Course: ${course_name}
+         ${course_name}
       `;
  
       return false;
