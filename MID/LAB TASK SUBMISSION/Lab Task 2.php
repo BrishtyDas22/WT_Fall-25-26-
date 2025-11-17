@@ -126,7 +126,28 @@ var errorDiv = document.getElementById("reg_error");
  
       return false;
     }
-    
+    function handleCourse() {
+        var course_name=document.getElementById("course_name").value.trim();
+        var errorDiv = document.getElementById("course_error");
+      var outputDiv = document.getElementById("course_output");
+      // Clear previous messages
+      errorDiv.innerHTML = "";
+      outputDiv.innerHTML = "";
+      if(course_name=== "")
+      {
+        errorDiv.innerHTML="please enter acourse name";
+        return false;
+      }
+      outputDiv.innerHTML = `
+        <strong>Registration Successful!</strong><br><br>
+      
+        
+        Course: ${course_name}
+      `;
+ 
+      return false;
+
+    }
    
  </script>
 </body>
