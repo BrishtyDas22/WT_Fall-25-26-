@@ -49,7 +49,7 @@
  
 
  
-  <form onsubmit="return handleSubmit()">
+  <form onsubmit="return handleSubmitReg()">
       <h2>Student Registration</h2>
     <label>Full Name:</label>
     <input type="text" id="name" />
@@ -65,6 +65,9 @@
   
  
     <button type="submit">Register</button>
+    <div id="reg_output" style="margin-top:15px: color:green"></div>
+     <div id="reg_error" style="color:red;"></div>
+  </form>
   </form>
   <br>
   <br>
@@ -80,9 +83,6 @@
     <input type="text" id="web tech" />
   </form>
  
-    <!-- Output Section -->
-  <div id="error"></div>
-  <div id="output"></div>
   <script>
     function handleSubmit() {
       // Get values from form
@@ -116,11 +116,10 @@
  
  
       outputDiv.innerHTML = `
-        <strong>Registration Complete!</strong><br><br>
+        <strong>Registration Successful!</strong><br><br>
         Name: ${name}<br>
-        ID: ${id}<br>
-        Age: ${age}<br>
-        Department: ${department}
+        
+        Department: ${email}
       `;
  
       return false;
