@@ -57,9 +57,10 @@
 </head>
 <body>
  
-  <h2>Registration Form</h2>
+ 
  
   <form onsubmit="return handleSubmit()">
+      <h2>Registration Form</h2>
     <label>Name:</label>
     <input type="text" id="name" />
  
