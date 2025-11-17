@@ -6,7 +6,7 @@
     body {
       font-family: Arial, sans-serif;
       padding: 30px;
-      background-color: #f0f8ff;
+      background-color: #d2dee9ff;
     }
  
     h2 {
@@ -44,9 +44,10 @@
 </head>
 <body>
  
-  <h2>Student Registration</h2>
+
  
   <form onsubmit="return handleSubmit()">
+      <h2>Student Registration</h2>
     <label>Full Name:</label>
     <input type="text" id="name" />
  
@@ -67,6 +68,7 @@
   
   
   <form onsubmit="return handleSubmit()">
+        <h2>Course Registration</h2>
     <label>Course Name:</label>
     <input type="text" id="name1" />
  
