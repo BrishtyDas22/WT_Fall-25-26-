@@ -73,31 +73,33 @@
   <br>
   
   
-  <form onsubmit="return handleSubmit()">
+  <form onsubmit="return handleCourse()">
         <h2>Course Registration</h2>
     <label>Course Name:</label>
     <input type="text" id="course_name" />
  
      <button type="submit">Add Course</button>
+     <div id="course_output" style="margin-top:15px: color:green"></div>
+     <div id="course_error" style="color:red;"></div>
  
     <input type="text" id="web tech" />
   </form>
  
   <script>
-    function handleSubmit() {
+    function handleSubmitReg() {
       // Get values from form
       var name = document.getElementById("name").value.trim();
       var email = document.getElementById("email").value.trim();
       var password = document.getElementById("password").value.trim();
       var confirm_password = document.getElementById("confirm_password").value.trim();
-       var course_name = document.getElementById("course_name").value.trim();
 
-      var errorDiv = document.getElementById("error");
-      var outputDiv = document.getElementById("output");
- 
-      // Clear previous messages
+var errorDiv = document.getElementById("reg_error");
+      var outputDiv = document.getElementById("reg_output");
+   // Clear previous messages
       errorDiv.innerHTML = "";
       outputDiv.innerHTML = "";
+
+      
       // Validation
       if (name === "" || email === "" || password === "" || confirm_password=== ""|| course_name=== "") {
         errorDiv.innerHTML = "Please fill in all fields.";
@@ -108,8 +110,8 @@
         errorDiv.innerHTML = " password must be numeric.";
         return false;
       }
-  if (isNaN(confirm_password)) {
-        errorDiv.innerHTML = " confirm_password must be numeric.";
+  if (password !==confirm_password) {
+        errorDiv.innerHTML = " password doesnot match.";
         return false;
       }
      
@@ -124,6 +126,7 @@
  
       return false;
     }
+    
    
  </script>
 </body>
