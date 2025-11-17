@@ -98,7 +98,34 @@
       // Clear previous messages
       errorDiv.innerHTML = "";
       outputDiv.innerHTML = "";
+      // Validation
+      if (name === "" || email === "" || password === "" || confirm_password=== ""|| course_name=== "") {
+        errorDiv.innerHTML = "Please fill in all fields.";
+        return false;
+      }
+ 
+      if (isNaN(password)) {
+        errorDiv.innerHTML = " password must be numeric.";
+        return false;
+      }
+  if (isNaN(confirm_password)) {
+        errorDiv.innerHTML = " confirm_password must be numeric.";
+        return false;
+      }
+     
+ 
+ 
+      outputDiv.innerHTML = `
+        <strong>Registration Complete!</strong><br><br>
+        Name: ${name}<br>
+        ID: ${id}<br>
+        Age: ${age}<br>
+        Department: ${department}
+      `;
+ 
+      return false;
     }
+   
  </script>
 </body>
 </html>
