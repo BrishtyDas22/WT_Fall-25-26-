@@ -11,7 +11,7 @@
  
     h2 {
       text-align: center;
-      color: #003366;
+      color: #000000ff;
     }
  
     form {
@@ -31,7 +31,10 @@
     }
  
     button {
-      background-color: #003366;
+      background-color: #2e64c8ff;
+      width:120px;
+      padding:8px;
+      border-radius:5px;
       color: white;
       cursor: pointer;
     }
