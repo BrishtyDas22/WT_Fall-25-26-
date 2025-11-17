@@ -22,6 +22,24 @@
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+ 
+    button {
+      background-color: #003366;
+      color: white;
+      cursor: pointer;
+    }
+ 
+    button:hover {
+      background-color: #0055aa;
+    }
+ 
     </style>
 </head>
 <body>
@@ -44,6 +62,10 @@
  
     <button type="submit">Register</button>
   </form>
+  <br>
+  <br>
+  
+  
   <form onsubmit="return handleSubmit()">
     <label>Course Name:</label>
     <input type="text" id="name1" />
