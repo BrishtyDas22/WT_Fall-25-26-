@@ -11,7 +11,7 @@
     echo '<h2>'.$txt2.'</h2>';
       echo '<p>welcome to '.$txt1.'  learing</p>';
      echo "<p>you should study from $txt2</p>";
-     echo "i love ".$txt1." !";
+     echo "i love    ".$txt1." !";
   
 
     ?>
