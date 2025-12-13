@@ -9,7 +9,8 @@
     <h1> Student Login</h1>
     <?php include '../PHP/login_validation.php';
  ?>
-    <form method="post" action="">
+ <div class="login-box">
+     <form method="post" action="">
 Student-ID:
     <input type="number" name="id" value="<?php echo $id;?>" >
     <?php echo $id_error;?>
@@ -25,5 +26,6 @@ Name:
       <input type="submit" name ="submit" value ="Login">
        <br><br>
 </form>
+</div >
 </body>
 </html>
