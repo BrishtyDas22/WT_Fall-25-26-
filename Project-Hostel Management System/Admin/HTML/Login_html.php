@@ -1,31 +1,37 @@
+<?php include"../PHP/login_validation.php";?>
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-   
-    <title>Student Login</title>
-    <link rel="stylesheet" href ="../CSS/Login.css">
+    <title>Login</title>
+       <link rel="stylesheet" href ="../CSS/Login.css">
 </head>
 <body>
-    <h1> Student Login</h1>
-    <?php include '../PHP/login_validation.php';
- ?>
- <div class="login-box">
-     <form method="post" action="">
-Student-ID:
-    <input type="number" name="id" value="<?php echo $id;?>" >
-    <?php echo $id_error;?>
-    <br><br>
-Name:
-    <input type="text" name="name" value="<?php echo $name;?>">
-    <?php echo $name_error;?>
-     <br><br>
- Password:
-    <input type="password" name="password" value="<?php echo $password;?>">
-      <?php echo $password_error;?>
-       <br><br>
-      <input type="submit" name ="submit" value ="Login">
-       <br><br>
-</form>
-</div >
+
+<div class="login-box">
+    <h2>Login</h2>
+
+    <form method="post" action="">
+
+        <label>ID</label>
+        <input type="text" name="id" value="<?php echo $id ?? ''; ?>">
+        <div class="error"><?php echo $id_error ?? ''; ?></div>
+
+        <label>Name</label>
+        <input type="text" name="name" value="<?php echo $name ?? ''; ?>">
+        <div class="error"><?php echo $name_error ?? ''; ?></div>
+
+        <label>Password</label>
+        <input type="password" name="password" value="<?php echo $password ?? ''; ?>">
+        <div class="error"><?php echo $password_error ?? ''; ?></div>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <?php if (!empty($success_msg)) { ?>
+        <div class="success"><?php echo $success_msg; ?></div>
+    <?php } ?>
+
+</div>
+
 </body>
 </html>
