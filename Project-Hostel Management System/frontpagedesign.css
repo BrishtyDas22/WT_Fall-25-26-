@@ -148,14 +148,14 @@ top: 118px;
     position: absolute;
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
- left: 800PX;
+ left: 250PX;
       border: 2px solid #1d0be2e1;
        height: 200px;
     width: 500px;
        border-radius: 20px; 
         background-color: #f4f4ff;
           padding: 10px ;
-top: 338px;
+top: 358px;
 
 }
 
@@ -177,4 +177,119 @@ top: 338px;
 
 
 }
+#room_box3{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+ left: 800PX;
+      border: 2px solid #1d0be2e1;
+       height: 200px;
+    width: 500px;
+       border-radius: 20px; 
+        background-color: #f4f4ff;
+          padding: 10px ;
+top: 358px;
+
+}
+
+#room_box3 img{
+     height: 200px;
+    width: 320px;
+       border-radius: 6px;
+       object-fit: cover;
+}
+
+
+.room_info3{
+    position:relative;
+ bottom: 205px;
+   left: 340px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:15px;
+  font-weight: bold;
+
+
+}
+#room_box4{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+ left: 250PX;
+      border: 2px solid #1d0be2e1;
+       height: 200px;
+    width: 500px;
+       border-radius: 20px; 
+        background-color: #f4f4ff;
+          padding: 10px ;
+top: 600px;
+
+}
+
+#room_box4 img{
+     height: 200px;
+    width: 320px;
+       border-radius: 6px;
+       object-fit: cover;
+}
+
+
+.room_info4{
+    position:relative;
+ bottom: 205px;
+   left: 340px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:15px;
+  font-weight: bold;
+
+
+}
+#room_box5{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+ left: 800PX;
+      border: 2px solid #1d0be2e1;
+       height: 200px;
+    width: 500px;
+       border-radius: 20px; 
+        background-color: #f4f4ff;
+          padding: 10px ;
+top: 600px;
+
+}
+
+#room_box5 img{
+     height: 200px;
+    width: 320px;
+       border-radius: 6px;
+       object-fit: cover;
+}
+
+
+.room_info5{
+    position:relative;
+ bottom: 205px;
+   left: 340px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:15px;
+  font-weight: bold;
+
+
+}
+.book_btn{
+    padding:8px 15px;
+    background-color: rgb(32, 32, 246);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+   
+}
+.book_btn:hover{
+    background-color: rgb(59, 75, 252);
+
+}
+
+
+
 
