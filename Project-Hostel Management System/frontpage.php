@@ -37,7 +37,7 @@
     <div class="room_info"><h3>Room Info:</h3>
         <p>Room No:101 </p>
     <p>price: 10000tk/month</p>
-
+<button class="book_btn">Book Now</button>
 
      </div> </div> 
        <div id="room_box1">
@@ -48,7 +48,7 @@
     <div class="room_info1"><h3>Room Info:</h3>
         <p>Room No:102 </p>
     <p>price: 10000tk/month</p>
-
+<button class="book_btn">Book Now</button>
 
      </div> </div> 
       <div id="room_box2">
@@ -59,9 +59,42 @@
     <div class="room_info2"><h3>Room Info:</h3>
         <p>Room No:103 </p>
     <p>price: 10000tk/month</p>
-
+<button class="book_btn">Book Now</button>
 
      </div> </div> 
-       
+         <div id="room_box3">
+
+
+    <img src="images/2bed.jpg" alt="room image ">
+
+    <div class="room_info3"><h3>Room Info:</h3>
+        <p>Room No:104 </p>
+    <p>price: 10000tk/month</p>
+<button class="book_btn">Book Now</button>
+
+     </div> </div> 
+     <div id="room_box4">
+
+
+    <img src="images/2bed.jpg" alt="room image ">
+
+    <div class="room_info4"><h3>Room Info:</h3>
+        <p>Room No:105 </p>
+    <p>price: 10000tk/month</p>
+<button class="book_btn">Book Now</button>
+
+     </div> </div> 
+
+     <div id="room_box5">
+
+
+    <img src="images/2bed.jpg" alt="room image ">
+
+    <div class="room_info5"><h3>Room Info:</h3>
+        <p>Room No:106 </p>
+    <p>price: 10000tk/month</p>
+<button class="book_btn">Book Now</button>
+
+     </div> </div> 
 </body>
 </html>
