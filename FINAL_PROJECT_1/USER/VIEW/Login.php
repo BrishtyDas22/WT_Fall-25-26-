@@ -1,6 +1,7 @@
 <?php
 include("../CONTROL/validationlogin.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,6 +47,10 @@ include("../CONTROL/validationlogin.php");
     ?>
 
 </div>
+<script> 
+    var msg = "<?php echo $success_msg; ?>"; 
+</script>
 
+<script src="../JS/login_alert.js"></script>
 </body>
 </html>
