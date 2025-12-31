@@ -42,7 +42,16 @@ if ($result->num_rows > 0) {
     }
 
     if (password_verify($password, $db_password)) {
+        session_start();
+    
+ foreach ($result as $row) {
+        $_SESSION["username"]    = $row['name'];
+        $_SESSION["email"]       = $row['email'];
+        $_SESSION["phonenumber"] = $row['phonenumber'];
+        $_SESSION["blood"]       = $row['blood'];
+    }
            $success_msg="Login successful!";
+
     } else {
         $password_error="Invalid password.";
     }
