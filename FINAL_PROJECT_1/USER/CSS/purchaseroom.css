@@ -1,0 +1,27 @@
+#room_box{
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    left: 10px;
+    border: 2px solid #1d0be2e1;
+    height: 200px;
+    width: 500px;
+    border-radius: 20px; 
+    background-color: #f4f4ff;
+    padding: 10px ;
+}
+#room_box img{
+     height: 200px;
+    width: 320px;
+       border-radius: 6px;
+       object-fit: cover;
+}
+
+.room_info1 {
+    position:relative;
+ bottom: 205px;
+   left: 340px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:15px;
+  font-weight: bold;
+}
