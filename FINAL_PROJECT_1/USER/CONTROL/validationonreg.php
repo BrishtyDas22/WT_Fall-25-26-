@@ -1,5 +1,5 @@
 <?php
-
+include '../MODEL/db.php';
 $name = "";
 $email = "";
 $phonenumber = "";
@@ -8,7 +8,7 @@ $c_password = "";
 $blood = "";
 
 
-$name_error = "";
+$name_error = "";   
 $email_error = "";
 $phonenumber_error = "";
 $password_error = "";
@@ -96,29 +96,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if(empty($name_error) && empty($email_error) && empty($phonenumber_error) && empty($password_error) && empty($blood_error)){
+        $conn = openConn();
+
+       $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+          $result = addUser($conn, $name, $email, $phonenumber, $hashed_password, $hashed_password, $blood);
+    if ($result === TRUE) {
         $success_msg="Registration successful!";
-        echo $success_msg;
-        echo "<br>";
-        echo "Name: " . $name."<br>";
-        echo "Email: " . $email."<br>";
-        echo "Phone Number: " . $phonenumber."<br>";
-        echo "Blood Group: " . $blood."<br>";
-        echo "<br>";
-
-
-        $name = "";
+     $name = "";
         $email = "";
         $phonenumber = "";
         $password = "";
         $c_password = "";
         $blood = "";   
 
-        exit();
-        
-
-
-
+      
+    } else {
+        $success_msg = "Error: " . $conn->error;
     }
+       
+        
+    
 
+
+ $conn->close();
+}
 }
 ?>
+
+     
+      
+        
+ 
+  
