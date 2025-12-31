@@ -1,4 +1,5 @@
 <?php
+include '../MODEL/db.php';
 $name="";
 $email="";
 $password="";
@@ -32,13 +33,28 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
 
     if($isValid){
-        
-        $success_msg="Login successful!";
+        $conn = openConn();
+        $result = getuserforlogin($conn, $name, $email);
+if ($result->num_rows > 0) {
+    $db_password = "";
+    foreach ($result as $row) {
+        $db_password = $row['password'];
     }
+
+    if (password_verify($password, $db_password)) {
+           $success_msg="Login successful!";
+    } else {
+        $password_error="Invalid password.";
+    }
+
+}
+else {
+    $success_msg="No user found with the provided name and email.";
+}
+
+$conn->close();
 }
 
 
-
-
-
+}
 ?>
